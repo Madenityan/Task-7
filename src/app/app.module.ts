@@ -10,6 +10,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import {MatIcon} from '@angular/material';
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
+import { LineChartComponent } from './components/line-chart/line-chart.component';
+import { CircleChartComponent } from './components/circle-chart/circle-chart.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { PieChartComponent } from './components/pie-chart/pie-chart.component';
     HomePageComponent,
     DashboardPageComponent,
     MatIcon,
-    PieChartComponent
+    PieChartComponent,
+    LineChartComponent,
+    CircleChartComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,6 @@ import { PieChartComponent } from './components/pie-chart/pie-chart.component';
     MDBBootstrapModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  exports: [ PieChartComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

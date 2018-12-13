@@ -1,12 +1,31 @@
 .wrapper-dashboard {
-  display: flex;
-  justify-content: space-between;
 
-  .board {
-    background-color: #fff;
-    opacity: 0.5;
-    border-radius: 5px;
-    padding: 15px;
+  .title-dashboard{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #6397ff;
+    font-weight: bold;
+  }
+  .wrapper-components {
+    display: flex;
+    padding-top: 15px;
+
+    .board {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 15px;
+    }
+
+    .board:first-child {
+      margin-right: 20px;
+    }
+    .pie-chart {
+      width: 30%;
+    }
+
+    .line-chart {
+      width: 70%;
+    }
   }
 }
 

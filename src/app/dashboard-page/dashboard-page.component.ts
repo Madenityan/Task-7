@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {PieChartComponent} from '../components/pie-chart/pie-chart.component';
 
 @Component({
   selector: 'geek-dashboard-page',
