@@ -1,5 +1,5 @@
 <div class="wrapper-page">
-  <nav>
+  <nav *ngIf="condition" [@fadeIn]='state'>
     <ul class="list-nav">
       <li>
         <a routerLink="/home" routerLinkActive="active">Home</a>
@@ -9,9 +9,9 @@
       </li>
     </ul>
   </nav>
-  <div class="wrapper-components">
+  <div class="wrapper-layout">
     <header class="top-menu">
-      <div>
+      <div (click)="toggleButton()">
         <i class="material-icons menu-icon">
           reorder
         </i>
@@ -29,8 +29,15 @@
       <div>
         <p class="text-question">Have questions? <a href="#">contact@ayoyo.com</a></p>
       </div>
+      <div>
+        <i class="material-icons icon-user">
+          person
+        </i>
+      </div>
     </header>
-    <router-outlet></router-outlet>
+    <div class="main">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
 
