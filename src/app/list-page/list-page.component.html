@@ -3,11 +3,14 @@
   <div class="list-messages">
     <mat-list>
       <mat-list-item *ngFor="let message of messages">
-        <mat-icon class="icon-avatar" matListIcon>favorite</mat-icon>
+        <div class="icon-avatar" (click)="toggle()">
+          <mat-icon matListIcon>favorite</mat-icon>
+          <span class="likes" *ngIf="show">{{message.likes}}</span>
+        </div>
         <img matListAvatar class="img-avatar" src="{{message.avatar}}" alt="avatar">
         <h3 matLine class="name-user">{{message.from}}</h3>
         <p matLine>
-          <span>{{message.content}} </span>
+          <span>{{message.content}}</span>
         </p>
       </mat-list-item>
     </mat-list>
