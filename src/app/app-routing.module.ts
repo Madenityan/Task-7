@@ -3,11 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomePageComponent } from './home-page/home-page.component';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
+import {TablePageComponent} from './table-page/table-page.component';
+import {ListPageComponent} from './list-page/list-page.component';
 
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent},
   { path: 'dashboard', component: DashboardPageComponent},
+  { path: 'table', component: TablePageComponent},
+  { path: 'list', component: ListPageComponent}
 ];
 
 @NgModule({
