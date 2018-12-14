@@ -1,0 +1,22 @@
+<div>
+  <h4 class="title-users">Users</h4>
+  <table class="table-users" mdbTable striped="true" bordered="true" >
+    <thead>
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr mdbTableCol *ngFor="let el of elements | paginate: { itemsPerPage: 7, currentPage: p }">
+      <th scope="row">{{el.id}}</th>
+      <td>{{el.first}}</td>
+      <td>{{el.last}}</td>
+      <td>{{el.email}}</td>
+      <td>{{el.phone}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="wrapper-pagination">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

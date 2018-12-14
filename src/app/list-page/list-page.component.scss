@@ -1,0 +1,42 @@
+.wrapper-messages {
+
+  .title-messages {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #6397ff;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .list-messages {
+    background-color: #d3dbe4;
+    border-radius: 5px;
+    padding: 10px;
+
+  }
+
+  mat-list-item {
+    border-bottom: 1px solid #c3c5dd;
+  }
+
+  mat-list-item:last-child {
+    border: none;
+  }
+
+  .name-user {
+    color: #FF4500;
+    font-weight: bold;
+  }
+
+  .img-avatar {
+    order: 1;
+  }
+
+  .icon-avatar {
+    order: 3;
+    color: #ff340a;
+  }
+}
+
+
+
