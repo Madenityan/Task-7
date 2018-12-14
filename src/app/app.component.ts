@@ -22,6 +22,4 @@ export class AppComponent {
   toggleButton() {
     this.condition = !this.condition;
   }
-
-
 }
