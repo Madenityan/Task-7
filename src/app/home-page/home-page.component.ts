@@ -7,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+ items: Array<any> = [];
+
+  constructor() {
+    this.items = [
+      { name: 'assets/image/karpaty.jpg'},
+      { name: 'assets/image/karpaty-2.jpg'},
+      { name: 'assets/image/karpaty-osin.jpg'},
+      { name: 'assets/image/mountains.jpg'},
+      { name: 'assets/image/mountain-2.jpg'},
+      { name: 'assets/image/mountain-3.jpg'},
+    ];
+  }
 
   ngOnInit() {
   }

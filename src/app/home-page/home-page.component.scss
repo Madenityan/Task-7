@@ -1,0 +1,21 @@
+#container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+
+  button:focus {
+    outline: none;
+  }
+}
+
+.items {
+  max-width: 300px;
+  height: 500px;
+}
+
+#left, #right {
+  margin: 30px;
+  cursor: pointer;
+}

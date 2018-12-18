@@ -1,18 +1,35 @@
-.wrapper-messages {
+.wrapper-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
-  .title-messages {
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #6397ff;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
+.container-messages {
+  margin-right: 30px;
+
 
   .list-messages {
     background-color: #d3dbe4;
     border-radius: 5px;
     padding: 10px;
+    overflow-y: scroll;
+    max-height: calc(100vh - 140px);
+  }
 
+  .list-messages::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: rgba(122, 123, 103, 0.19);
+  }
+
+  .list-messages::-webkit-scrollbar {
+    height: 10px;
+    width: 5px;
+  }
+
+  .list-messages::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #4675d2;
   }
 
   mat-list-item {
@@ -42,6 +59,83 @@
     margin-left: 7px;
   }
 }
+
+.title-messages {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #6397ff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.to-do-list {
+  width:50%;
+
+  mat-card {
+    margin-bottom: 10px;
+  }
+
+.form-task {
+  display: flex;
+  justify-content: space-between;
+}
+  input {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #6397ff;
+    width: 80%;
+    margin-right: 20px;
+  }
+}
+
+.wrapper-item {
+  margin-bottom: 10px;
+
+  button:focus {
+    outline: none;
+    color: #ff340a;
+  }
+
+  mat-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .task-list {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  .task-item {
+    overflow: hidden;
+    word-break: break-all;
+  }
+}
+
+.container-item {
+  overflow: auto;
+  max-height: calc(100vh - 220px);
+}
+
+.container-item::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: rgba(122, 123, 103, 0.19);
+}
+
+.container-item::-webkit-scrollbar {
+  height: 10px;
+  width: 5px;
+}
+
+.container-item::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #4675d2;
+}
+
+
 
 
 

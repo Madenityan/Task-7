@@ -1,18 +1,43 @@
-<div class="wrapper-messages">
-  <h4 class="title-messages">Messages</h4>
-  <div class="list-messages">
-    <mat-list>
-      <mat-list-item *ngFor="let message of messages">
-        <div class="icon-avatar" (click)="toggle()">
-          <mat-icon matListIcon>favorite</mat-icon>
-          <span class="likes" *ngIf="show">{{message.likes}}</span>
-        </div>
-        <img matListAvatar class="img-avatar" src="{{message.avatar}}" alt="avatar">
-        <h3 matLine class="name-user">{{message.from}}</h3>
-        <p matLine>
-          <span>{{message.content}}</span>
-        </p>
-      </mat-list-item>
-    </mat-list>
+<div class="wrapper-list">
+  <div class="container-messages">
+    <h4 class="title-messages">Messages</h4>
+    <div class="list-messages">
+      <mat-list>
+        <mat-list-item *ngFor="let message of messages">
+          <div class="icon-avatar" (click)="toggle($event)">
+            <mat-icon matListIcon>favorite</mat-icon>
+            <span class="likes" *ngIf="show">{{message.likes}}</span>
+          </div>
+          <img matListAvatar class="img-avatar" src="{{message.avatar}}" alt="avatar">
+          <h3 matLine class="name-user">{{message.from}}</h3>
+          <p matLine>
+            <span>{{message.content}}</span>
+          </p>
+        </mat-list-item>
+      </mat-list>
+    </div>
   </div>
+  <div class="to-do-list">
+  <h4 class="title-messages">To Do</h4>
+  <mat-card>
+    <form [formGroup]="form" (submit)="submit()" class="form-task">
+      <input matInput formControlName="task" name = "text" type="text" placeholder="Add tasks"/>
+      <button mat-raised-button color="primary">Add</button>
+    </form>
+  </mat-card>
+  <div class="container-item">
+    <div *ngFor="let task of tasks; let i = index" class="wrapper-item">
+      <mat-card>
+        <ul class="task-list" >
+          <li class="task-item">
+            <span>{{task}}</span>
+          </li>
+        </ul>
+        <button mat-icon-button (click)="deleteTask(i)">
+          <mat-icon>clear</mat-icon>
+        </button>
+      </mat-card>
+    </div>
+  </div>
+</div>
 </div>

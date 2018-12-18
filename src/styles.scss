@@ -48,6 +48,8 @@ body {
   margin: 0;
 }
 
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 .mat-list-text {
   order: 2 !important;
 }
