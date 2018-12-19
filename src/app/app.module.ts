@@ -25,6 +25,8 @@ import { MatListModule } from '@angular/material/list';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogComponent } from './components/mat-dialog/mat-dialog.component';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { PostPageComponent } from './post-page/post-page.component';
+import { FilterItemsPipe } from './post-page/filter-items.pipe';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
     TablePageComponent,
     ListPageComponent,
     MatDialogComponent,
+    PostPageComponent,
+    FilterItemsPipe
   ],
   imports: [
     BrowserModule,

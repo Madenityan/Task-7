@@ -1,0 +1,43 @@
+<div class="wrapper-post">
+  <div class="wrapper-header-post">
+    <div class="container-filter">
+      <mat-form-field>
+        <label>
+          <input matInput type="text" placeholder="Search for" [(ngModel)]="titleArticles"/>
+        </label>
+      </mat-form-field>
+    </div>
+    <div class="container-sort">
+      <div class="wrapper-btn">
+        <span>Sort:</span>
+        <button mat-icon-button (click)="sortAsc()">
+          <mat-icon>arrow_downward</mat-icon>
+        </button>
+        <button mat-icon-button (click)="sortDesc()">
+          <mat-icon>arrow_upward</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <ul class="list-posts">
+    <li *ngFor="let post of listPosts | filterItems: titleArticles">
+      <mat-card class="mat-articles">
+        <div class="container-img">
+          <img src="{{post.img}}">
+        </div>
+        <div class="header-post">
+          <h4>{{post.title}}</h4>
+        </div>
+        <div class="post-info">
+          <p><i class="material-icons">
+            query_builder
+          </i>{{post.date}}</p>
+          <p><i class="material-icons">
+            insert_comment
+          </i>{{post.comments}}</p>
+        </div>
+      </mat-card>
+    </li>
+    <li class="no-elements" *ngIf="(listPosts | filterItems: titleArticles).length === 0">No elements</li>
+  </ul>
+</div>

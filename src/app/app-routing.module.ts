@@ -5,6 +5,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
 import {TablePageComponent} from './table-page/table-page.component';
 import {ListPageComponent} from './list-page/list-page.component';
+import {PostPageComponent} from './post-page/post-page.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent},
   { path: 'dashboard', component: DashboardPageComponent},
   { path: 'table', component: TablePageComponent},
-  { path: 'list', component: ListPageComponent}
+  { path: 'list', component: ListPageComponent},
+  { path: 'post', component: PostPageComponent},
 ];
 
 @NgModule({

@@ -1,21 +1,22 @@
-<div id="container">
-  <div ng2-carouselamos class="slider-wrapper"
-    [items]="items"
-    [width]="900"
-    [$prev]="prev"
-    [$next]="next"
-    [$item]="item">
-  </div>
-  <ng-template #prev>
-    <img src="assets/image/icon-left.png" id="left"/>
-  </ng-template>
-  <ng-template #next>
-    <img src="assets/image/icon-right.png" id="right"/>
-  </ng-template>
-  <ng-template #item let-item let-i="index">
-    <div class="items">
-      <img src="{{item.name}}" />
-
+<div>
+  <div id="container">
+    <div ng2-carouselamos class="slider-wrapper"
+      [items]="items"
+      [width]="900"
+      [$prev]="prev"
+      [$next]="next"
+      [$item]="item">
     </div>
-  </ng-template>
+    <ng-template #prev>
+      <img src="assets/image/icon-left.png" id="left"/>
+    </ng-template>
+    <ng-template #next>
+      <img src="assets/image/icon-right.png" id="right"/>
+    </ng-template>
+    <ng-template #item let-item let-i="index">
+      <div class="items">
+        <img src="{{item.name}}" />
+      </div>
+    </ng-template>
+  </div>
 </div>
