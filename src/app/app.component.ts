@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {trigger, state, style, animate, transition} from '@angular/animations';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'geek-root',
@@ -18,8 +19,15 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
 export class AppComponent {
 
   public condition = true;
+  constructor(private router: Router) { }
 
   toggleButton() {
     this.condition = !this.condition;
   }
+
+  openRegister() {
+    this.router.navigate(['/register']);
+  }
+
+
 }

@@ -4,6 +4,10 @@
   flex-direction: row;
   user-select: none;
 
+  button {
+    outline: none;
+  }
+
   nav {
     background-color: #182833;
     width: 150px;
@@ -15,7 +19,6 @@
   .wrapper-layout {
     display: flex;
     flex-direction: column;
-    //position: relative;
     width: 100%;
 
   .top-menu {

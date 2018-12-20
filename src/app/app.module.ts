@@ -28,6 +28,8 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { PostPageComponent } from './post-page/post-page.component';
 import { FilterItemsPipe } from './post-page/filter-items.pipe';
 import { SlickModule } from 'ngx-slick';
+import { MatMenuModule} from '@angular/material/menu';
+import { RegistrationComponent } from './authorization/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { SlickModule } from 'ngx-slick';
     ListPageComponent,
     MatDialogComponent,
     PostPageComponent,
-    FilterItemsPipe
+    FilterItemsPipe,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,8 @@ import { SlickModule } from 'ngx-slick';
     MatIconModule,
     MatDialogModule,
     Ng2CarouselamosModule,
-    SlickModule.forRoot()
+    SlickModule.forRoot(),
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent],

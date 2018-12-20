@@ -6,6 +6,7 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
 import {TablePageComponent} from './table-page/table-page.component';
 import {ListPageComponent} from './list-page/list-page.component';
 import {PostPageComponent} from './post-page/post-page.component';
+import {RegistrationComponent} from './authorization/registration/registration.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'table', component: TablePageComponent},
   { path: 'list', component: ListPageComponent},
   { path: 'post', component: PostPageComponent},
+  { path: 'register', component: RegistrationComponent},
 ];
 
 @NgModule({

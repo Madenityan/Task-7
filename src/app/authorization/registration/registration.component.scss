@@ -1,0 +1,25 @@
+.wrapper-registration {
+  margin: 0 auto;
+
+  h4 {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #6397ff;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+
+  .mat-form-field {
+    width: 300px;
+  }
+
+  .form-registration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffff;
+    padding: 50px;
+    height: 100%;
+
+  }
+}

@@ -29,9 +29,16 @@
         <p class="text-question">Have questions? <a href="#">contact@ayoyo.com</a></p>
       </div>
       <div>
-        <i class="material-icons icon-user">
-          person
-        </i>
+        <button mat-button [matMenuTriggerFor]="menu">
+          <i class="material-icons icon-user">
+            person
+          </i>
+        </button>
+        <mat-menu class="menu-icon-top" #menu="matMenu">
+          <button (click)="openRegister()" mat-menu-item>Registration</button>
+          <button mat-menu-item>Login</button>
+          <button mat-menu-item>Settings</button>
+        </mat-menu>
       </div>
     </header>
     <div class="main">
