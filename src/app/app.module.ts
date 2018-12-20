@@ -27,7 +27,7 @@ import { MatDialogComponent } from './components/mat-dialog/mat-dialog.component
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { PostPageComponent } from './post-page/post-page.component';
 import { FilterItemsPipe } from './post-page/filter-items.pipe';
-
+import { SlickModule } from 'ngx-slick';
 
 @NgModule({
   declarations: [
@@ -58,7 +58,8 @@ import { FilterItemsPipe } from './post-page/filter-items.pipe';
     MatFormFieldModule,
     MatIconModule,
     MatDialogModule,
-    Ng2CarouselamosModule
+    Ng2CarouselamosModule,
+    SlickModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],
