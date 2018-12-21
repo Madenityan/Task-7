@@ -21,6 +21,9 @@
     @include respond-to(handhelds) {
       height: auto;
     }
+    @include respond-to(medium-screens) {
+      height: auto;
+    }
   }
 }
   .wrapper-layout {
@@ -135,6 +138,9 @@
 
     @include respond-to(handhelds) {
       padding: 5px;
+      height: auto;
+    }
+    @include respond-to(medium-screens) {
       height: auto;
     }
   }
