@@ -1,8 +1,27 @@
+$break-small: 576px;
+$break-large: 768px;
+$break-extra-large: 1200px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large + 1) and (min-width: $break-extra-large - 1) { @content; }
+  }
+}
+
 .container-home {
   max-width: 100%;
   margin: 0 auto;
-  background-color: #ffffff;
   padding:25px 0;
+
+  @include respond-to(wide-screens) {
+    background-color: #ffffff;
+  }
 
   button:focus {
     outline: none;
@@ -11,6 +30,14 @@
   .items {
     max-width: 400px;
     height: 450px;
+
+    @include respond-to(handhelds) {
+      max-width: 460px;
+      height: 370px;
+    }
+    @include respond-to(medium-screens) {
+      max-width: 250px;
+    }
   }
 
   #left, #right {
@@ -18,4 +45,6 @@
     cursor: pointer;
   }
 }
+
+
 

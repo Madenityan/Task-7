@@ -1,12 +1,43 @@
+$break-small: 576px;
+$break-large: 768px;
+$break-extra-large: 1200px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large + 1) and (min-width: $break-extra-large - 1) { @content; }
+  }
+}
+
 .wrapper-list {
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @include respond-to(handhelds) {
+    display: block;
+  }
+  @include respond-to(medium-screens) {
+    display: block;
+  }
 }
 
 .container-messages {
   margin-right: 30px;
 
+  @include respond-to(handhelds) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  @include respond-to(medium-screens) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
 
   .list-messages {
     background-color: #d3dbe4;
@@ -14,6 +45,10 @@
     padding: 10px;
     overflow-y: scroll;
     max-height: calc(100vh - 140px);
+
+    @include respond-to(handhelds) {
+      max-height: calc(100vh - 200px);
+    }
   }
 
   .list-messages::-webkit-scrollbar-track {
@@ -66,10 +101,24 @@
   color: #6397ff;
   font-weight: bold;
   margin-bottom: 20px;
+
+  @include respond-to(handhelds) {
+    margin-bottom: 15px;
+  }
+  @include respond-to(medium-screens) {
+    margin-bottom: 20px;
+  }
 }
 
 .to-do-list {
   width:50%;
+
+  @include respond-to(handhelds) {
+    width:100%;
+  }
+  @include respond-to(medium-screens) {
+    width:100%;
+  }
 
   mat-card {
     margin-bottom: 10px;
@@ -117,6 +166,10 @@
 .container-item {
   overflow: auto;
   max-height: calc(100vh - 220px);
+
+  @include respond-to(handhelds) {
+    max-height: calc(100vh - 300px);
+  }
 }
 
 .container-item::-webkit-scrollbar-track {

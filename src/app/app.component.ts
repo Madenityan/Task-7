@@ -18,7 +18,7 @@ import {Router} from '@angular/router';
 })
 export class AppComponent {
 
-  public condition = true;
+  public condition = false;
   constructor(private router: Router) { }
 
   toggleButton() {

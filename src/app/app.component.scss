@@ -1,3 +1,19 @@
+$break-small: 500px;
+$break-large: 720px;
+$break-extra-large: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large + 1) and (max-width: $break-extra-large - 1) { @content; }
+  }
+}
+
 .wrapper-page {
   font-family: 'Montserrat', sans-serif;
   display: flex;
@@ -14,6 +30,10 @@
     height: 100vh;
     transform: none;
     transition: transform .2s;
+
+    @include respond-to(handhelds) {
+      height: auto;
+    }
   }
 }
   .wrapper-layout {
@@ -28,6 +48,15 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @include respond-to(handhelds) {
+      justify-content: space-between;
+      padding-left: 10px;
+    }
+    @include respond-to(medium-screens) {
+      justify-content: space-between;
+      padding-left: 10px;
+    }
   }
 
   .menu-icon {
@@ -58,9 +87,30 @@
     cursor: pointer;
   }
 
+  .btn-user {
+    padding: 0;
+
+    @include respond-to(handhelds) {
+      font-size: 10px;
+      min-width: 45px;
+    }
+    @include respond-to(medium-screens) {
+      font-size: 10px;
+      min-width: 45px;
+    }
+    @include respond-to(wide-screens){
+      font-size: 10px;
+      min-width: 10px;
+    }
+  }
+
   .text-question {
     color: #d4d4d4;
     font-size: 15px;
+
+    @include respond-to(handhelds) {
+      font-size: 10px;
+    }
   }
 
     label,p {
@@ -74,6 +124,10 @@
 
   li {
     padding: 15px 20px;
+
+    @include respond-to(handhelds) {
+      padding: 10px 15px;
+    }
   }
 
   a {
@@ -81,12 +135,21 @@
     color: #d4d4d4;
     font-size: 18px;
     font-weight: bold;
+
+    @include respond-to(handhelds) {
+      font-size: 15px;
+    }
   }
 }
 
   .main {
     padding: 20px;
     height: calc(100vh - 40px);
+
+    @include respond-to(handhelds) {
+      padding: 5px;
+      height: auto;
+    }
   }
 
 .main-footer {
@@ -97,6 +160,10 @@
   height:30px;
   background-color: #182833;
   text-align: center;
+
+  @include respond-to(handhelds) {
+    position: relative;
+  }
 
   p {
     color: #fff;
