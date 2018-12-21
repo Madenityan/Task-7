@@ -1,18 +1,5 @@
-$break-small: 500px;
-$break-large: 720px;
-$break-extra-large: 1024px;
-
-@mixin respond-to($media) {
-  @if $media == handhelds {
-    @media only screen and (max-width: $break-small) { @content; }
-  }
-  @else if $media == medium-screens {
-    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
-  }
-  @else if $media == wide-screens {
-    @media only screen and (min-width: $break-large + 1) and (max-width: $break-extra-large - 1) { @content; }
-  }
-}
+@import "styles/_mixins.scss";
+@import "styles/_variables.scss";
 
 .wrapper-page {
   font-family: 'Montserrat', sans-serif;
@@ -25,7 +12,7 @@ $break-extra-large: 1024px;
   }
 
   nav {
-    background-color: #182833;
+    background-color: $light-black;
     width: 150px;
     height: 100vh;
     transform: none;
@@ -44,7 +31,7 @@ $break-extra-large: 1024px;
   .top-menu {
     width: 100%;
     height: 40px;
-    background-color: #182833;
+    background-color: $light-black;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -67,7 +54,7 @@ $break-extra-large: 1024px;
   }
 
   .icon-search {
-    color: #d4d4d4;
+    color: $light-grey-two;
     font-size: 20px;
     vertical-align: middle;
     margin-right: 10px;
@@ -81,7 +68,7 @@ $break-extra-large: 1024px;
   }
 
   .icon-user {
-    color: #d4d4d4;
+    color: $light-grey-two;
     font-size: 20px;
     vertical-align: middle;
     cursor: pointer;
@@ -105,7 +92,7 @@ $break-extra-large: 1024px;
   }
 
   .text-question {
-    color: #d4d4d4;
+    color: $light-grey-two;
     font-size: 15px;
 
     @include respond-to(handhelds) {
@@ -132,7 +119,7 @@ $break-extra-large: 1024px;
 
   a {
     text-decoration: none;
-    color: #d4d4d4;
+    color: $light-grey-two;
     font-size: 18px;
     font-weight: bold;
 
@@ -158,7 +145,7 @@ $break-extra-large: 1024px;
   bottom: 0;
   width: 100%;
   height:30px;
-  background-color: #182833;
+  background-color: $light-black;
   text-align: center;
 
   @include respond-to(handhelds) {
@@ -166,7 +153,7 @@ $break-extra-large: 1024px;
   }
 
   p {
-    color: #fff;
+    color: $white;
     font-size: 12px;
     display: inline-block;
     vertical-align: -webkit-baseline-middle;
