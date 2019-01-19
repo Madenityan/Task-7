@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomePageComponent } from './home-page/home-page.component';
-import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
-import {TablePageComponent} from './table-page/table-page.component';
-import {ListPageComponent} from './list-page/list-page.component';
-import {PostPageComponent} from './post-page/post-page.component';
-import {RegistrationComponent} from './authorization/registration/registration.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { DashboardPageComponent } from './components/dashboard-page/dashboard-page.component';
+import {TablePageComponent} from './components/table-page/table-page.component';
+import {ListPageComponent} from './components/list-page/list-page.component';
+import {PostPageComponent} from './components/post-page/post-page.component';
+import {RegistrationComponent} from './components/registration/registration.component';
 
 
 const routes: Routes = [

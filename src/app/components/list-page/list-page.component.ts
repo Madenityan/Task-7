@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
-import {MatDialogComponent} from '../components/mat-dialog/mat-dialog.component';
+import {MatDialogComponent} from '../mat-dialog/mat-dialog.component';
 
 @Component({
   selector: 'geek-list-page',
@@ -147,7 +147,6 @@ export class ListPageComponent implements OnInit {
     });
 
     dialog.afterClosed().subscribe(result => {
-      console.log(result);
 
       if (result) {
         this.tasks.splice(index, 1);

@@ -5,8 +5,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { DashboardPageComponent } from './dashboard-page/dashboard-page.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { DashboardPageComponent } from './components/dashboard-page/dashboard-page.component';
 import {
   MatButtonModule,
   MatCardModule,
@@ -18,18 +18,18 @@ import {
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 import { LineChartComponent } from './components/line-chart/line-chart.component';
 import { CircleChartComponent } from './components/circle-chart/circle-chart.component';
-import { TablePageComponent } from './table-page/table-page.component';
+import { TablePageComponent } from './components/table-page/table-page.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { ListPageComponent } from './list-page/list-page.component';
+import { ListPageComponent } from './components/list-page/list-page.component';
 import { MatListModule } from '@angular/material/list';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogComponent } from './components/mat-dialog/mat-dialog.component';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
-import { PostPageComponent } from './post-page/post-page.component';
-import { FilterItemsPipe } from './post-page/filter-items.pipe';
+import { PostPageComponent } from './components/post-page/post-page.component';
+import { FilterItemsPipe } from './Pipes/filter-items.pipe';
 import { SlickModule } from 'ngx-slick';
 import { MatMenuModule} from '@angular/material/menu';
-import { RegistrationComponent } from './authorization/registration/registration.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 
 @NgModule({
   declarations: [
