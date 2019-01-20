@@ -10,7 +10,7 @@ import {MatDialogComponent} from '../mat-dialog/mat-dialog.component';
 })
 export class ListPageComponent implements OnInit {
 
-  public messages = [
+  public messages: Array<object> = [
     {
       avatar: '../assets/image/user.jpg',
       from: 'Juli Otto',
@@ -124,7 +124,7 @@ export class ListPageComponent implements OnInit {
       likes: 24
     }
   ];
-  public show = false;
+  public show: boolean = false;
   public tasks = [];
 
   public form: FormGroup = new FormGroup({

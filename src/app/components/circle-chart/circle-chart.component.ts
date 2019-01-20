@@ -16,7 +16,7 @@ export class CircleChartComponent implements OnInit {
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'My First dataset' }
   ];
 
-  public chartLabels: Array<any> = ['Red', 'Green', 'Yellow', 'Grey', 'Dark Grey'];
+  public chartLabels: Array<string> = ['Red', 'Green', 'Yellow', 'Grey', 'Dark Grey'];
 
   public chartColors: Array<any> = [
     {
@@ -38,12 +38,10 @@ export class CircleChartComponent implements OnInit {
     }
   ];
 
-  public chartOptions: any = {
+  public chartOptions: object = {
     responsive: true
   };
 
   ngOnInit() {
   }
-  public chartClicked(e: any): void { }
-  public chartHovered(e: any): void { }
 }

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablePageComponent implements OnInit {
 
-  elements: any = [
+  elements: Array<object> = [
     {id: 1, first: 'Mark',  last: 'Otto', email: 'toty@example.com', phone: '555 - 444 - 777'},
     {id: 2, first: 'Jacob', last: 'Thornton', email: 'toty@example.com', phone: '555 - 444 - 777'},
     {id: 3, first: 'Larry', last: 'the Bird', email: 'toty@example.com', phone: '555 - 444 - 777'},
@@ -31,7 +31,7 @@ export class TablePageComponent implements OnInit {
     {id: 21, first: 'Mark',  last: 'Otto', email: 'toty@example.com', phone: '555 - 444 - 777'},
   ];
 
-  headElements = ['ID', 'First', 'Last', 'Email', 'Phone'];
+  headElements:Array<string> = ['ID', 'First', 'Last', 'Email', 'Phone'];
 
   constructor() { }
 

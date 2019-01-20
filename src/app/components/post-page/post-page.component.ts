@@ -153,11 +153,11 @@ export class PostPageComponent implements OnInit {
       likes: 40
     }
   ];
-  titleArticles = '';
+  titleArticles: string = '';
   constructor() { }
 
   ngOnInit() {}
-  sortAsc() {
+  sortAsc(): void {
     this.listPosts.sort((a, b) => {
       if (a.comments < b.comments) {
         return -1;
@@ -169,7 +169,7 @@ export class PostPageComponent implements OnInit {
     });
   }
 
-  sortDesc() {
+  sortDesc(): void {
     this.listPosts.sort((a, b) => {
       if (a.comments > b.comments) {
         return -1;

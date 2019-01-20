@@ -16,9 +16,9 @@ export class LineChartComponent implements OnInit {
     { data: [28, 48, 40, 19, 86, 27, 90], label: 'My Second dataset' }
   ];
 
-  public chartLabels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public chartLabels: Array<string> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
-  public chartColors: Array<any> = [
+  public chartColors: Array<object> = [
     {
       backgroundColor: 'rgba(105, 0, 132, .2)',
       borderColor: 'rgba(200, 99, 132, .7)',
@@ -31,13 +31,11 @@ export class LineChartComponent implements OnInit {
     }
   ];
 
-  public chartOptions: any = {
+  public chartOptions: object = {
     responsive: true
   };
 
   ngOnInit() {
   }
-  public chartClicked(e: any): void { }
-  public chartHovered(e: any): void { }
 }
 
