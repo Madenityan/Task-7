@@ -21,11 +21,11 @@ export class AppComponent {
   public condition:boolean = false;
   constructor(private router: Router) { }
 
-  toggleButton() {
+  toggleButton():void {
     this.condition = !this.condition;
   }
 
-  openRegister() {
+  openRegister():void {
     this.router.navigate(['/register']);
   }
 

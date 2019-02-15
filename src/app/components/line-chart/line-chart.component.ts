@@ -9,9 +9,9 @@ export class LineChartComponent implements OnInit {
 
   constructor() { }
 
-  public chartType = 'line';
+  public chartType:string = 'line';
 
-  public chartDatasets: Array<any> = [
+  public chartDatasets: Array<object> = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'My First dataset' },
     { data: [28, 48, 40, 19, 86, 27, 90], label: 'My Second dataset' }
   ];
@@ -35,7 +35,6 @@ export class LineChartComponent implements OnInit {
     responsive: true
   };
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
 

@@ -9,15 +9,15 @@ export class CircleChartComponent implements OnInit {
 
   constructor() {}
 
-  public chartType = 'polarArea';
+  public chartType: string = 'polarArea';
 
-  public chartDatasets: Array<any> = [
+  public chartDatasets: Array<object> = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'My First dataset' }
   ];
 
   public chartLabels: Array<string> = ['Red', 'Green', 'Yellow', 'Grey', 'Dark Grey'];
 
-  public chartColors: Array<any> = [
+  public chartColors: Array<object> = [
     {
       backgroundColor: [
         'rgba(219, 0, 0, 0.1)',

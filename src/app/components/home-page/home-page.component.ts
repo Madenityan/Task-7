@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
- items: Array<any> = [];
+ public items: Array<object> = [];
+
   constructor() {
     this.items = [
       { name: 'assets/image/karpaty.jpg'},

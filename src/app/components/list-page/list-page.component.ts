@@ -125,7 +125,7 @@ export class ListPageComponent implements OnInit {
     }
   ];
   public show: boolean = false;
-  public tasks = [];
+  public tasks: Array<string> = [];
 
   public form: FormGroup = new FormGroup({
     task: new FormControl()
@@ -133,12 +133,12 @@ export class ListPageComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
 
-  submit() {
+  submit(): void {
     this.tasks.push(this.form.value.task);
     this.form.reset();
   }
 
-  deleteTask(index: number) {
+  deleteTask(index: number):void {
     let dialog: MatDialogRef<MatDialogComponent>;
     dialog = this.dialog.open(MatDialogComponent, {
       height: '200px',
@@ -147,7 +147,6 @@ export class ListPageComponent implements OnInit {
     });
 
     dialog.afterClosed().subscribe(result => {
-
       if (result) {
         this.tasks.splice(index, 1);
       }
@@ -155,7 +154,7 @@ export class ListPageComponent implements OnInit {
   }
 
   ngOnInit() {}
-  toggle(event) {
+  toggle(event): void {
     this.show = !this.show;
   }
 }

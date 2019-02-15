@@ -11,7 +11,7 @@ export class PieChartComponent implements OnInit {
 
   public chartType: string = 'pie';
 
-  public chartDatasets: Array<any> = [
+  public chartDatasets: Array<object> = [
     { data: [300, 50, 100, 40, 120], label: 'My First dataset' }
   ];
 
@@ -29,6 +29,5 @@ export class PieChartComponent implements OnInit {
     responsive: true
   };
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

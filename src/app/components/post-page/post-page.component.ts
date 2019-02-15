@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostPageComponent implements OnInit {
 
-  public listPosts = [
+  public listPosts: Array<any> = [
     {
       id: 'Some info',
       img: 'http://placehold.it/160x200',
@@ -180,5 +180,4 @@ export class PostPageComponent implements OnInit {
       return 0;
     });
   }
-
 }

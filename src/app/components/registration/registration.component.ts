@@ -8,7 +8,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class RegistrationComponent implements OnInit {
 
-  allControl: FormGroup;
+  public allControl: FormGroup;
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -21,7 +21,7 @@ export class RegistrationComponent implements OnInit {
     });
   }
 
-  public submit() {
+  public submit(): void {
     console.log(this.allControl, this.allControl.value);
     this.allControl.reset();
   }
