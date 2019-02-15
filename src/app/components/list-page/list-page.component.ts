@@ -15,7 +15,7 @@ export class ListPageComponent implements OnInit {
       avatar: '../assets/image/user.jpg',
       from: 'Juli Otto',
       subject: 'Lorem ipsum',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      content: 'Lorem ipsum dolor sit amet',
       likes: 20
     },
     {
@@ -36,7 +36,7 @@ export class ListPageComponent implements OnInit {
       avatar: '../assets/image/user-2.png',
       from: 'John Peter',
       subject: 'Lorem ipsum',
-      content: 'In dapibus, turpis ut auctor interdum',
+      content: 'In dapibus, turpis ',
       likes: 47
     },
     {
@@ -50,14 +50,14 @@ export class ListPageComponent implements OnInit {
       avatar: '../assets/image/user-2.png',
       from: 'John Peter',
       subject: 'Lorem ipsum',
-      content: 'In dapibus, turpis ut auctor interdum',
+      content: 'In dapibus, turpis',
       likes: 78
     },
     {
       avatar: '../assets/image/user.jpg',
       from: 'Juli Otto',
       subject: 'Lorem ipsum',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      content: 'Lorem ipsum dolor sit amet.',
       likes: 20
     },
     {
@@ -71,7 +71,7 @@ export class ListPageComponent implements OnInit {
       avatar: '../assets/image/user.jpg',
       from: 'Juli Otto',
       subject: 'Lorem ipsum',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      content: 'Lorem ipsum dolor sit amet.',
       likes: 20
     },
     {
@@ -92,7 +92,7 @@ export class ListPageComponent implements OnInit {
       avatar: '../assets/image/user-2.png',
       from: 'John Peter',
       subject: 'Lorem ipsum',
-      content: 'In dapibus, turpis ut auctor interdum',
+      content: 'In dapibus, turpis',
       likes: 47
     },
     {
@@ -106,14 +106,14 @@ export class ListPageComponent implements OnInit {
       avatar: '../assets/image/user-2.png',
       from: 'John Peter',
       subject: 'Lorem ipsum',
-      content: 'In dapibus, turpis ut auctor interdum',
+      content: 'In dapibus, turpis',
       likes: 78
     },
     {
       avatar: '../assets/image/user.jpg',
       from: 'Juli Otto',
       subject: 'Lorem ipsum',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      content: 'Lorem ipsum dolor sit.',
       likes: 20
     },
     {

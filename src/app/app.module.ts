@@ -26,7 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogComponent } from './components/mat-dialog/mat-dialog.component';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { PostPageComponent } from './components/post-page/post-page.component';
-import { FilterItemsPipe } from './Pipes/filter-items.pipe';
+import { FilterItemsPipe } from './pipes/filter-items.pipe';
 import { SlickModule } from 'ngx-slick';
 import { MatMenuModule} from '@angular/material/menu';
 import { RegistrationComponent } from './components/registration/registration.component';

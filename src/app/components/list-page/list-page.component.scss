@@ -2,7 +2,7 @@
 @import "../../../assets/styles/variables";
 
 .wrapper-list {
-  width: 100%;
+  //width: 100%;
   display: flex;
   justify-content: space-between;
 
@@ -32,9 +32,12 @@
     padding: 10px;
     overflow-y: scroll;
     max-height: calc(100vh - 140px);
+    min-width: 100%;
 
     @include respond-to(handhelds) {
       max-height: calc(100vh - 200px);
+      padding: 0;
+
     }
   }
 
@@ -75,6 +78,10 @@
     order: 3;
     color: $red;
     cursor: pointer;
+
+    @include respond-to(handhelds) {
+     display: none;
+    }
   }
 
   .likes {
@@ -98,7 +105,8 @@
 }
 
 .to-do-list {
-  width:50%;
+  width:100%;
+  margin-bottom: 40px;
 
   @include respond-to(handhelds) {
     width:100%;

@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CircleChartComponent implements OnInit {
 
-  constructor() {
-  }
+  constructor() {}
 
   public chartType = 'polarArea';
 
@@ -42,6 +41,5 @@ export class CircleChartComponent implements OnInit {
     responsive: true
   };
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

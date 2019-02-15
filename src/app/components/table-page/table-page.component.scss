@@ -8,6 +8,7 @@
   }
   thead, th, td {
     border-color: $grafit;
+    word-break: break-word;
 
     @include respond-to(handhelds) {
       padding: 5px;
